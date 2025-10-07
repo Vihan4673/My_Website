@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import '//codepen.io/chrisdothtml/pen/ojLzJK.css';
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +11,9 @@
     font-family: 'Roboto', sans-serif;
 }
 :root{
-    --bg-color: #121212;
+    --bg-color: #edebeb;
     --second-bg-color: blue;
-    --text-color: white;
+    --text-color: #000000;
     --main-color: #007bff;
 }
 html{
@@ -36,7 +37,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, #383838, #1a1a1a);
+    background: linear-gradient(90deg, #ddd6d6, #9e8e8e);
     border-left: 5px solid #e74c3c;
     border-right: 5px solid var(--text-color);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
@@ -105,27 +106,64 @@ section {
     display: inline-block;
 }
 
-.social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
-}
-.social-media a:hover {
-    background: var(--main-color);
-    box-shadow: 0 1rem 2rem var(--main-color);
+/* --- SOCIAL MEDIA BUTTONS --- */
+.social-btns {
+    text-align: center;
+    margin: 3rem 0;
 
 }
+.social-btns .btn {
+    display: inline-block;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25%;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: 90%;
+    left: -60%;
+    transform: rotate(45deg);
+    transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn .fa {
+    font-size: 30px;
+    color: #555;
+    vertical-align: middle;
+    transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
 
-/* --- CONTACT ME BUTTON --- */
+/* Hover Animations */
+.social-btns .btn:hover::before {
+    top: -10%;
+    left: -10%;
+}
+.social-btns .btn:hover .fa {
+    color: #fff;
+    transform: scale(1.1);
+}
+.social-btns .btn.facebook::before { background-color: #3B5998; }
+.social-btns .btn.facebook .fa { color: #3B5998; }
+.social-btns .btn.instagram::before { background-color: #E1306C; }
+.social-btns .btn.instagram .fa { color: #E1306C; }
+.social-btns .btn.github::before { background-color: #181717; }
+.social-btns .btn.github .fa { color:#181717; }
+.social-btns .btn.linkedin::before { background-color: #0A66C2; }
+.social-btns .btn.linkedin .fa { color: #0A66C2; }
 
-.btn {
+
+/* CONTACT BUTTON */
+.contactme {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: #e74c3c;
@@ -137,9 +175,7 @@ section {
     font-weight: 600;
     transition: .5s ease;
 }
-
-.btn:hover {
+.btn-main:hover {
     box-shadow: none;
     background: var(--main-color);
-
 }
