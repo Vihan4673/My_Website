@@ -63,10 +63,9 @@ section {
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
-
 }
 
-/* --- HOME SECTION LAYOUT (Crucial Update) --- */
+/* --- HOME SECTION  --- */
 .home{
     display: flex;
     align-items: center;
@@ -77,7 +76,6 @@ section {
 
 /* --- HOME CONTENT  --- */
 .home-content {
-
     max-width: 50%;
 }
 .home-content h3 {
@@ -108,7 +106,7 @@ section {
 
 /* --- SOCIAL MEDIA BUTTONS --- */
 .social-btns {
-    text-align: center;
+    text-align: left;
     margin: 3rem 0;
 
 }
@@ -178,4 +176,41 @@ section {
 .btn-main:hover {
     box-shadow: none;
     background: var(--main-color);
+}
+
+
+.home .home-img { flex: 0 0 40%; max-width: 40%; text-align: center; position: relative; }
+.home-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: 20px;
+    bottom: -40px;
+}
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: -20px;
+    top: -40px;
+}
+.home .home-img img {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid var(--skin-color);
+    box-shadow: 0 0 50px rgba(220, 20, 60, 0.2);
+    transition: all 0.3s ease;
+}
+.home .home-img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 60px rgba(220, 20, 60, 0.4);
 }
