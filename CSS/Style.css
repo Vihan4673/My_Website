@@ -15,6 +15,8 @@
     --second-bg-color: blue;
     --text-color: #000000;
     --main-color: #007bff;
+    --skin-color: #e74c3c;
+
 }
 html{
     font-size: 62.5%;
@@ -178,31 +180,11 @@ section {
     background: var(--main-color);
 }
 
-
 .home .home-img { flex: 0 0 40%; max-width: 40%; text-align: center; position: relative; }
-.home-img::after {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-}
-.home-img::before {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
-}
+
 .home .home-img img {
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     margin: auto;
     border-radius: 50%;
     object-fit: cover;
