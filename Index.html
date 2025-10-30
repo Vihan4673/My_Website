@@ -8,57 +8,95 @@
     <meta name="description" content="This my HTML, CSS, JS Tutorial">
     <meta name="author" content="Vihan Vimen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="Stylesheet" href="CSS/Style.css">
     <!-- Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Typed.js CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
 
-<!-- Header Design  -->
+
+
+<div class="animation-container">
+    <ul class="squares" aria-hidden="true">
+        <li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li>
+    </ul>
+
+<!-- Robot Spline Viewer -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.82/build/spline-viewer.js"></script>
+
 <header class="header">
     <a href="#" class="logo">Vihan73</a>
-    <i class='bxr  bx-menu' id="menu-icon"  ></i>
+    <i class='bxr  bx-menu' id="menu-icon"></i>
+
     <nav class="navbar">
         <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
         <a href="#about"><i class="fas fa-user"></i> About</a>
         <a href="#services"><i class="fas fa-cogs"></i> Service</a>
         <a href="#skills"><i class="fas fa-chart-bar"></i> Skills</a>
+        <a href="#Projects"><i class="fas fa-briefcase"></i> Projects</a>
+        <a href="Assignment.html"><i class="fas fa-file-alt"></i> Assignment</a>
+        <a href="#gallery"><i class="fas fa-image"></i> Gallery</a>
+        <a href="#contactme"><i class="fas fa-envelope"></i> Contact Me</a>
     </nav>
 
 </header>
 
 
-<!-- Home Section -->
+<!-------------------------------- Home Section -------------------------->
 <section class="home" id="home">
     <div class="home-content">
         <h3>Hello, I'm</h3>
         <h1>Vihan Vimen</h1>
-        <h3>And I'm a <span class="typing"></span></h3>
+
+       <h3>And I'm a <span class="typing"></span></h3>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            <script src="js.js"></script>
+
         <p>Passionate about building user-friendly applications and solving
             real-world problems with code</p>
 
         <div class="social-btns">
-            <a class="btn facebook" href="#"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a class="btn instagram" href="#"><i class="fab fa-instagram"></i></a>
-            <a class="btn github" href="#"><i class="fab fa-github"></i></a>
+            <a class="btn youtube" href="https://www.youtube.com/@VihaN73" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="btn facebook" href="https://www.facebook.com/share/17E5vMM8Pw/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn linkedin" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn instagram" href="https://www.instagram.com/vi_ha_n_73?igsh=MXNkODVjeXNmdGhlag%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="btn github" href="https://github.com/Vihan4673" target="_blank"><i class="fab fa-github"></i></a>
         </div>
 
-        <a href="#" class="contactme">Contact Me</a>
+
+        <a href="#contactme" class="contactme">Contact Me</a>
     </div>
     <div class="home-img padd-15">
         <img src="Img/WhatsApp%20Image%202025-09-09%20at%2008.12.11_6be0b0a2.jpg" alt="My Image">
+        <spline-viewer class="robot" url="https://prod.spline.design/DSq5JknCj0Dx4bbH/scene.splinecode"></spline-viewer>
     </div>
-
-
-
 </section>
 
+<!--========================== About Section ==========================-->
+<section class="about section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container autoShow">
+        <div class="about-img">
+            <img src="Img/Image%20.jpg" alt="About Image">
+        </div>
+        <div class="about-content">
+            <h3 class="about-title">I'm Vihan Vimen</h3>
+            <p class="about-subtitle">A Passionate Developer</p>
+            <p class="about-text">
+                I am a dedicated and enthusiastic developer with a passion for creating innovative solutions. With a strong foundation in web development, I specialize in building responsive and user-friendly applications. My goal is to leverage technology to solve real-world problems and enhance user experiences.
+            </p>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
