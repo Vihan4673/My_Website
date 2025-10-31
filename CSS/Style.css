@@ -295,9 +295,6 @@ section {
     box-shadow: none;
     background: var(--main-color);
 }
-
-.home .home-img { flex: 0 0 40%; max-width: 40%; text-align: center; position: relative; }
-
 .home .home-img img {
     height: 500px;
     width: 500px;
@@ -312,6 +309,7 @@ section {
     transform: scale(1.02);
     box-shadow: 0 0 60px rgba(220, 20, 60, 0.4);
 }
+
 @media  screen and (max-width: 768px) {
     #menu-icon{
         display: block;
@@ -603,12 +601,11 @@ section {
 }/* -------------------------------------------- SKILLS SECTION -------------------------------------------------- */
 .skills-container.icon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1.5rem;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* wider cards */
+    gap: 2rem; /* more breathing space */
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1rem;
-
+    padding: 3rem 1rem;
 }
 
 .skill-box.icon-card {
@@ -618,16 +615,14 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2 .5rem 1.5rem;
-    min-height: 120px;
-    border-radius: 1rem;
+    padding: 2rem 1rem; /* corrected padding syntax */
+    min-height: 180px; /* 🔥 larger box */
+    border-radius: 1.5rem;
     background: var(--card-dark);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: default;
-
-    /* Auto-floating animation */
     animation: float 4s ease-in-out infinite;
 }
 
@@ -639,27 +634,31 @@ section {
 .skill-box.icon-card:nth-child(6) { animation-delay: 2.5s; }
 
 .skill-box:hover {
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(-10px) scale(1.05);
     box-shadow:
-            0 0 10px var(--main-color),
-            0 0 20px rgba(99, 102, 241, 0.6),
-            inset 0 0 5px rgba(255, 255, 255, 0.2);
+            0 0 15px var(--main-color),
+            0 0 25px rgba(99, 102, 241, 0.6),
+            inset 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-.skill-icon {
-    font-size: 7rem;
-    margin-bottom: 0.5rem;
+/* Larger Icons */
+.skill-icon,
+.skill-box i {
+    font-size: 5rem; /* increased from 3.5–4rem */
+    margin-bottom: 0.8rem;
     color: var(--text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.skill-box:hover .skill-icon {
+.skill-box:hover .skill-icon,
+.skill-box:hover i {
     color: var(--main-color);
-    text-shadow: 0 0 8px var(--main-color);
+    text-shadow: 0 0 12px var(--main-color);
 }
 
-.skill-title {
-    font-size: 1.5rem;
+.skill-title,
+.skill-box h3 {
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-color);
     margin: 0;
@@ -667,15 +666,7 @@ section {
     letter-spacing: 0.5px;
 }
 
-/* Individual icon colors */
-.fa-html5 { color: #e34c26; }
-.fa-css3-alt { color: #2965f1; }
-.fa-js-square { color: #f7df1e; }
-.fa-react { color: #61dafb; }
-.fa-node-js { color: #68a063; }
-.fa-python { color: #306998; }
-
-/* Floating keyframes */
+/* Floating animation */
 @keyframes float {
     0%   { transform: translateY(0); }
     25%  { transform: translateY(-10px); }
@@ -684,24 +675,26 @@ section {
     100% { transform: translateY(0); }
 }
 
-/* Responsive styles */
-@media (max-width: 640px) {
+/* Responsive */
+@media (max-width: 768px) {
     .skills-container.icon-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-    .skill-icon {
-        font-size: 2.5rem;
+        gap: 1.2rem;
     }
     .skill-box.icon-card {
-        padding: 1rem 0.5rem;
-        min-height: 100px;
+        min-height: 140px;
+    }
+    .skill-box i {
+        font-size: 3rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .skills-container.icon-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .skill-box.icon-card {
+        min-height: 120px;
     }
 }
 
@@ -827,15 +820,161 @@ section {
     background-color: #61d7ff; /* Slightly lighter on hover */
     box-shadow: 0 8px 25px rgba(79, 195, 247, 0.6);
 }
+/* Assigmnets Section */
+/* Modern CSS for Assignments Section in Portfolio */
+
+/* General Styles */
+.Assignments {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.08);    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Assignments Container */
+.assignments-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Assignment Box */
+.assignment-box {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.assignment-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.assignment-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.assignment-box:hover::before {
+    transform: scaleX(1);
+}
+
+.assignment-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.assignment-box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Assignment Button */
+.assignment-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.assignment-btn:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.assignment-btn i {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .assignments-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .assignment-box {
+        padding: 20px;
+    }
+
+    .assignment-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .assignment-box p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Assignments {
+        padding: 40px 10px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .assignment-box {
+        padding: 15px;
+    }
+}
+
 
 /* Gallery Section */
-/* Ensure the --main-color variable is defined in your :root or body tag */
 
-/* Gallery Section */
-/* --- DARK MODE/THEME VARIABLES (Ensure these are set up in your HTML) --- */
-
-
-/* Gallery Container (Modified to include grabbing cursor state) */
 .gallery-container {
     display: flex;
     justify-content: flex-start;

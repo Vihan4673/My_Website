@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "Software Engineer",
             "Content Creator",
             "Video Editor",
+            "Fiver"
         ],
         typeSpeed: 100,
         backSpeed: 60,
