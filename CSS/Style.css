@@ -601,8 +601,8 @@ section {
 }/* -------------------------------------------- SKILLS SECTION -------------------------------------------------- */
 .skills-container.icon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* wider cards */
-    gap: 2rem; /* more breathing space */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 1rem;
@@ -615,8 +615,8 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem 1rem; /* corrected padding syntax */
-    min-height: 180px; /* 🔥 larger box */
+    padding: 2rem 1rem;
+    min-height: 180px;
     border-radius: 1.5rem;
     background: var(--card-dark);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -626,6 +626,7 @@ section {
     animation: float 4s ease-in-out infinite;
 }
 
+/* Staggered animation delay */
 .skill-box.icon-card:nth-child(1) { animation-delay: 0s; }
 .skill-box.icon-card:nth-child(2) { animation-delay: 0.5s; }
 .skill-box.icon-card:nth-child(3) { animation-delay: 1s; }
@@ -633,6 +634,7 @@ section {
 .skill-box.icon-card:nth-child(5) { animation-delay: 2s; }
 .skill-box.icon-card:nth-child(6) { animation-delay: 2.5s; }
 
+/* Hover effect for box */
 .skill-box:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow:
@@ -641,21 +643,29 @@ section {
             inset 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-/* Larger Icons */
+/* Icon default colors */
 .skill-icon,
 .skill-box i {
-    font-size: 5rem; /* increased from 3.5–4rem */
+    font-size: 5rem;
     margin-bottom: 0.8rem;
-    color: var(--text-color);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.skill-box:hover .skill-icon,
+/* Assign normal colors for each icon */
+.skills-container.icon-grid .skill-box:nth-child(1) i { color: #f39c12; }
+.skills-container.icon-grid .skill-box:nth-child(2) i { color: #e74c3c; }
+.skills-container.icon-grid .skill-box:nth-child(3) i { color: #3498db; }
+.skills-container.icon-grid .skill-box:nth-child(4) i { color: #9b59b6; }
+.skills-container.icon-grid .skill-box:nth-child(5) i { color: #1abc9c; }
+.skills-container.icon-grid .skill-box:nth-child(6) i { color: #e67e22; }
+
+/* Change icon color on hover */
 .skill-box:hover i {
     color: var(--main-color);
     text-shadow: 0 0 12px var(--main-color);
 }
 
+/* Skill title */
 .skill-title,
 .skill-box h3 {
     font-size: 1.25rem;
@@ -697,8 +707,6 @@ section {
         min-height: 120px;
     }
 }
-
-
 /* ------------------------------------ PROJECTS SECTION ----------------------------------------------- */
 
 .projects-container {
@@ -973,123 +981,103 @@ section {
 }
 
 
-/* Gallery Section */
+/* =======================================
+   FIXED GALLERY - SMOOTH & USER-FRIENDLY
+   ======================================= */
 
-.gallery-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem; /* Increased spacing for better look */
-    overflow-x: scroll;
-    overflow-y: hidden; /* REMOVED VERTICAL SCROLL */
-    scroll-behavior: smooth;
-    padding: 3rem 1rem; /* Increased vertical padding */
+.gallery.section {
+    padding: 1rem 1rem;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    max-width: 100%;
-
-    /* Set grab cursor by default, as the container is scrollable */
-    cursor: grab;
 }
 
-/* Cursor change when actively dragging - CRITICAL FOR DRAG UX */
-.gallery-container.is-dragging {
-    cursor: grabbing !important;
-}
-
-
-/* Hide scrollbar for a cleaner look */
-.gallery-container::-webkit-scrollbar {
-    display: none;
-}
 .gallery-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* Gallery Box Container */
-.gallery-box {
-    flex: 0 0 auto;
-    /* Added subtle blur and background for the 'Glass' effect base */
-    background: rgba(var(--card-bg-rgb, 255, 255, 255), 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 1.5rem;
-    padding: 0.5rem; /* Padding for the image inside the glass box */
-
-    /* Transitions for smooth change */
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* cursor: grab is moved to .gallery-container */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
-}
-
-/* All images (500x500 as requested) */
-.gallery-box img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 1rem;
-    display: block;
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.5s;
-}
-
-/* --- CENTER IMAGE HIGHLIGHT (GLASS LOOK) --- */
-.gallery-box.center {
-    /* Scale the entire container slightly */
-    transform: scale(1.05);
-    z-index: 10;
-
-    /* Enhanced Glass Effect */
-    background: rgba(var(--card-bg-rgb, 255, 255, 255), 0.3);
-    border: 2px solid var(--main-color);
-
-    /* Prominent Shadow to Lift the Card */
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3),
-    0 0 20px var(--main-color); /* Theme color glow */
-}
-
-.gallery-box.center img {
-    transform: scale(1); /* No need for extra image scaling inside the already scaled box */
-    filter: brightness(1.1); /* Keep the image slightly brighter */
-    border-radius: 1rem; /* Maintain border radius */
-}
-
-/* Optional: make images next to center a little bigger */
-.gallery-box.adjacent {
-    transform: scale(1.02);
-    filter: brightness(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
-
-/* --- PAGINATION DOTS CSS --- */
-
-/* You must use the HTML structure from the previous step for this to work: <div id="galleryDots">...</div> */
-.gallery-pagination {
+    perspective: 1000px;
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
-    margin-top: 2rem; /* Increased margin */
-    padding-bottom: 3rem;
+    align-items: center;
+    overflow: visible;
+    padding: 40px 20px;
+    min-height: 400px;
 }
 
-/* Style for each dot element */
-.pagination-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #555;
-    border-radius: 50%;
+.gallery-box {
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    width: 250px;
+    height: 250px;
+    margin: 0 -40px;
+    z-index: 1;
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: scale(0.7);
+    opacity: 0.9;
+
+    /* 🧈 Smooth transition both ways */
+    transition:
+            transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 0.6s ease,
+            opacity 0.6s ease,
+            margin 0.6s ease,
+            border-color 0.6s ease;
 }
 
-/* Style for the dot corresponding to the currently viewed image */
-.pagination-dot.active {
-    width: 16px; /* Active dot is slightly bigger */
-    background-color: var(--main-color); /* Highlight using theme color */
-    transform: scale(1.1);
-    border: 2px solid #fff; /* White border for contrast */
+.gallery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none; /* Keep hover stable */
 }
 
+/* Hover effect: smooth zoom-in and pop-out */
+.gallery-box:hover {
+    transform: scale(1.1) translateZ(100px);
+    opacity: 1;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    margin: 0 25px;
+    border-color: var(--main-color);
+}
+
+/* 🕐 Keeps hover alive a bit longer even after mouse leaves */
+.gallery-box {
+    transition-delay: 0.05s; /* slight delay entering */
+}
+.gallery-box:not(:hover) {
+    transition-delay: 0.25s; /* delay before shrinking back */
+}
+
+/* Fade others when one is hovered */
+.gallery-container:hover .gallery-box:not(:hover) {
+    transform: scale(0.6);
+    margin: 0 -35px;
+    opacity: 0.6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .gallery-box {
+        width: 180px;
+        height: 180px;
+        margin: 0 -20px;
+        transform: scale(0.8);
+    }
+    .gallery-box:hover {
+        transform: scale(1.05) translateZ(50px);
+        margin: 0 10px;
+    }
+    .gallery-container:hover .gallery-box:not(:hover) {
+        transform: scale(0.7);
+        margin: 0 -25px;
+    }
+}
 
 /* --------------------------------- CONTACT ME SECTION ----------------------------- */
 #contactme {

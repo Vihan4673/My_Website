@@ -18,6 +18,49 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- NEW CSS FOR SCROLL TO TOP BUTTON -->
+    <style>
+        /* --- Scroll to Top Button Style --- */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: #25afb6; /* User-friendly modern color */
+            color: white;
+            border-radius: 50%;
+            display: none; /* Initially hidden, controlled by JS */
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 1000;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+            text-decoration: none;
+        }
+
+        .scroll-to-top:hover {
+            background: #1d8a90;
+            transform: scale(1.1) translateY(-3px);
+        }
+
+        .scroll-to-top .fas {
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 22px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -36,7 +79,6 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
             <a href="#about"><i class="fas fa-user"></i> About</a>
             <a href="#services"><i class="fas fa-cogs"></i> Service</a>
             <a href="#skills"><i class="fas fa-chart-bar"></i> Skills</a>
@@ -120,32 +162,31 @@
     <section class="skills section" id="skills" data-aos="fade-up">
         <h2 class="section-title">Tech <span class="highlight">Skills</span></h2>
         <div class="skills-container icon-grid">
+            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-java"></i><h3>java</h3></div>
             <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-python"></i><h3>Python</h3></div>
             <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
             <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-js-square"></i><h3>JavaScript</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-react"></i><h3>React</h3></div>
             <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-node-js"></i><h3>Node.js</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-python"></i><h3>Python</h3></div>
         </div>
         <h2 class="section-title">Tech <span class="highlight">Learning & Exploring </span></h2>
         <div class="skills-container icon-grid">
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fas fa-code"></i><h3>C++</h3></div>
+            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="700"><i class="fas fa-code"></i><h3>C#</h3></div>
+            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-react"></i><h3>React</h3></div>
         </div>
     </section>
 
     <!--========================== Projects Section ==========================-->
-    <section class="projects section" id="Projects">
+    <section class="projects section" id="Projects" data-aos="fade-up">
         <h2 class="section-title">My Projects</h2>
         <div class="projects-container">
 
-            <!-- Project One -->
-            <div class="project-box">
-                <!-- NOTE: Please ensure the 'Img' folder path is correct for your images -->
+            <div class="project-box"  data-aos="fade-up" data-aos-delay="100">
                 <img src="Img/project1.jpg" alt="Task Manager Web Application">
                 <h3 class="project-title">Project One</h3>
                 <p class="project-description">A web application that allows users to track their tasks and manage their time effectively.</p>
 
-                <!-- GitHub Button Added -->
                 <div class="btn-container">
                     <a href="https://github.com/your-username/project-one-repo" target="_blank" class="github-btn">
                         <i class="fab fa-github mr-2"></i> Repository Balanna
@@ -154,12 +195,11 @@
             </div>
 
             <!-- Project Two -->
-            <div class="project-box">
+            <div class="project-box"  data-aos="fade-up" data-aos-delay="200">
                 <img src="Img/project2.jpg" alt="E-commerce Platform">
                 <h3 class="project-title">Project Two</h3>
                 <p class="project-description">An e-commerce platform that provides a seamless shopping experience for users.</p>
 
-                <!-- GitHub Button Added -->
                 <div class="btn-container">
                     <a href="https://github.com/your-username/project-two-repo" target="_blank" class="github-btn">
                         <i class="fab fa-github mr-2"></i> Github Repository
@@ -168,7 +208,7 @@
             </div>
 
             <!-- Project Three -->
-            <div class="project-box">
+            <div class="project-box"  data-aos="fade-up" data-aos-delay="300">
                 <img src="Img/project3.jpg" alt="Mobile Fitness App">
                 <h3 class="project-title">Project Three</h3>
                 <p class="project-description">A mobile app that helps users stay fit and healthy by tracking their workouts and nutrition.</p>
@@ -186,7 +226,7 @@
 
     <!--================ Assignments Section =================-->
     <section class="Assignments" id="Assignments" data-aos="fade-up">
-    <h2 class="section-title">My Assignments</h2>
+        <h2 class="section-title">My Assignments</h2>
         <div class="assignments-container">
             <!-- Assignment One -->
             <div class="assignment-box" data-aos="fade-up" data-aos-delay="100">
@@ -211,19 +251,18 @@
         </div>
     </section>
 
-
     <!--================ Gallery Section =================-->
     <section class="gallery section" id="gallery" data-aos="fade-up">
         <h2 class="section-title">Gallery</h2>
         <div class="gallery-container">
-            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="100"><img src="Img/Image%20.jpg" alt=""></div>
-            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="200"><img src="Img/Image3%202025-10-16%20at%2012.15.40_6d0969d3.jpg" alt=""></div>
-            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="300"><img src="Img/Image2%202025-10-16%20at%2012.20.32_25a2cfe5.jpg" alt=""></div>
-            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="400"><img src="Img/WhatsApp%20Image%202025-09-09%20at%2008.12.11_6be0b0a2.jpg" alt=""></div>
-            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="500"><img src="Img/Image1%202025-10-16%20at%2012.20.33_8ecb9ab6.jpg" alt=""></div>
+            <!-- Initial image scale and overlap is handled by the CSS above -->
+            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="100"><img src="Img/Image%20.jpg" alt="Gallery Image 1"></div>
+            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="200"><img src="Img/Image3%202025-10-16%20at%2012.15.40_6d0969d3.jpg" alt="Gallery Image 2"></div>
+            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="300"><img src="Img/Image2%202025-10-16%20at%2012.20.32_25a2cfe5.jpg" alt="Gallery Image 3"></div>
+            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="400"><img src="Img/WhatsApp%20Image%202025-09-09%20at%2008.12.11_6be0b0a2.jpg" alt="Gallery Image 4"></div>
+            <div class="gallery-box" data-aos="zoom-in" data-aos-delay="500"><img src="Img/Image1%202025-10-16%20at%2012.20.33_8ecb9ab6.jpg" alt="Gallery Image 5"></div>
         </div>
     </section>
-
     <!--================ Contact Me Section =================-->
     <section id="contactme" data-aos="fade-up">
         <h2>Get In <span>Touch</span></h2>
@@ -239,6 +278,12 @@
             </form>
         </div>
     </section>
+
+    <!-- Scroll to Top Button (New) -->
+    <!-- This element uses the Font Awesome arrow icon and is positioned using the CSS defined above -->
+    <a href="#home" id="scrollToTopBtn" aria-label="Scroll to Top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!--================ Footer =================-->
     <footer data-aos="fade-up">
@@ -259,6 +304,33 @@
         </div>
     </footer>
 </div>
+
+<!--========== Scroll to Top Script (New) ==========-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollButton = document.getElementById('scrollToTopBtn');
+
+        // Function to show/hide the button based on scroll position
+        window.addEventListener('scroll', () => {
+            // Show the button after scrolling down 300 pixels
+            if (window.scrollY > 300) {
+                scrollButton.style.display = 'flex';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+
+        // Function to handle smooth scrolling back to the top
+        scrollButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Smoothly scroll to the top (position 0)
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 
 <!--========== AOS Script ==========-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
