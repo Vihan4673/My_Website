@@ -345,6 +345,46 @@ section {
     }
 
 }
+
+/* --- Scroll to Top Button Style --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: #25afb6; /* User-friendly modern color */
+    color: white;
+    border-radius: 50%;
+    display: none; /* Initially hidden, controlled by JS */
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.scroll-to-top:hover {
+    background: #1d8a90;
+    transform: scale(1.1) translateY(-3px);
+}
+
+.scroll-to-top .fas {
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
 /*------------------------------------------------ About Section ------------------------------------*/
 
 /* Base autoShow animation */
