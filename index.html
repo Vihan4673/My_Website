@@ -18,8 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
 </head>
 
 <body>
@@ -28,11 +26,11 @@
         <li></li><li></li><li></li><li></li><li></li>
         <li></li><li></li><li></li><li></li><li></li>
     </ul>
-
     <!-- Robot Spline Viewer -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.82/build/spline-viewer.js"></script>
 
-    <!--================ Header =================-->
+
+    <!--==================================== Header ===============================================-->
     <header class="header">
         <a href="#" class="logo">Vihan73</a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -48,7 +46,7 @@
         </nav>
     </header>
 
-    <!--================ Home Section =================-->
+    <!--====================================== Home Section =======================================-->
     <section class="home" id="home">
         <div class="home-content" data-aos="fade-right">
             <h3>Hello, I'm</h3>
@@ -77,7 +75,13 @@
         </div>
     </section>
 
-    <!--================ About Section =================-->
+    <!--========== Scroll to Top Button ============-->
+    <a href="#home" id="scrollToTopBtn" aria-label="Scroll to Top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+    <!--============================================= About Section ============================================-->
     <section class="about section" id="about" data-aos="fade-up">
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
@@ -95,7 +99,7 @@
         </div>
     </section>
 
-    <!--================ Services Section =================-->
+    <!--============================================= Services Section ===============================================-->
     <section class="services section" id="services" data-aos="fade-up">
         <h2 class="section-title">My Services</h2>
         <div class="services-container">
@@ -117,7 +121,7 @@
         </div>
     </section>
 
-    <!--================ Skills Section =================-->
+    <!--=============================================== Skills Section ============================================-->
     <section class="skills section" id="skills" data-aos="fade-up">
         <h2 class="section-title">Tech <span class="highlight">Skills</span></h2>
         <div class="skills-container icon-grid">
@@ -136,7 +140,7 @@
         </div>
     </section>
 
-    <!--========================== Projects Section ==========================-->
+    <!--=================================================== Projects Section ==============================================-->
     <section class="projects section" id="Projects" data-aos="fade-up">
         <h2 class="section-title">My Projects</h2>
         <div class="projects-container">
@@ -183,10 +187,12 @@
         </div>
     </section>
 
-    <!--================ Assignments Section =================-->
+
+    <!--============================================ Assignments Section ==================================================-->
     <section class="Assignments" id="Assignments" data-aos="fade-up">
         <h2 class="section-title">My Assignments</h2>
         <div class="assignments-container">
+
             <!-- Assignment One -->
             <div class="assignment-box" data-aos="fade-up" data-aos-delay="100">
                 <h3>Assignment One</h3>
@@ -210,11 +216,10 @@
         </div>
     </section>
 
-    <!--================ Gallery Section =================-->
+    <!--=========================================== Gallery Section =======================================-->
     <section class="gallery section" id="gallery" data-aos="fade-up">
         <h2 class="section-title">Gallery</h2>
         <div class="gallery-container">
-            <!-- Initial image scale and overlap is handled by the CSS above -->
             <div class="gallery-box" data-aos="zoom-in" data-aos-delay="100"><img src="Img/Image%20.jpg" alt="Gallery Image 1"></div>
             <div class="gallery-box" data-aos="zoom-in" data-aos-delay="200"><img src="Img/Image3%202025-10-16%20at%2012.15.40_6d0969d3.jpg" alt="Gallery Image 2"></div>
             <div class="gallery-box" data-aos="zoom-in" data-aos-delay="300"><img src="Img/Image2%202025-10-16%20at%2012.20.32_25a2cfe5.jpg" alt="Gallery Image 3"></div>
@@ -222,7 +227,8 @@
             <div class="gallery-box" data-aos="zoom-in" data-aos-delay="500"><img src="Img/Image1%202025-10-16%20at%2012.20.33_8ecb9ab6.jpg" alt="Gallery Image 5"></div>
         </div>
     </section>
-    <!--================ Contact Me Section =================-->
+
+    <!--========================================= Contact Me Section ===================================-->
     <section id="contactme" data-aos="fade-up">
         <h2>Get In <span>Touch</span></h2>
         <div class="contact-container">
@@ -238,60 +244,37 @@
         </div>
     </section>
 
-    <!-- Scroll to Top Button (New) -->
-    <!-- This element uses the Font Awesome arrow icon and is positioned using the CSS defined above -->
-    <a href="#home" id="scrollToTopBtn" aria-label="Scroll to Top" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!--================ Footer =================-->
-    <footer data-aos="fade-up">
-        <div class="footer-content">
-            <div class="footer-left">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:vihanvimen46@gmail.com">vihanvimen46@gmail.com</a></div>
-                <div><i class="fas fa-phone-alt"></i> <a href="tel:+94724526774">+94 72 452 6774</a></div>
-                <div><i class="fas fa-map-marker-alt"></i> <span>Colombo, Sri Lanka</span></div>
-            </div>
-            <div class="footer-right">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+    <!-- ============================ Footer ============================ -->
+    <!-- Footer with waves and fade-up animation -->
+    <footer id="fade" data-aos="fade-up">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
         </div>
-        <div class="copyright">
-            &copy; 2025 Vihan Vimen. All Rights Reserved.
+
+        <div class="footer-content">
+            <ul class="social_icons">
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/vihan-vimen" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/vihan4673" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+
+            <ul class="footer-info">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:vihanvimen46@gmail.com">vihanvimen46@gmail.com</a></li>
+                <li><i class="fas fa-phone-alt"></i> <a href="tel:+94724526774">+94 72 452 6774</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+            </ul>
+
+            <p class="copyright">© 2025 Vihan Vimen. All Rights Reserved.</p>
         </div>
     </footer>
-</div>
 
-<!--========== Scroll to Top Script (New) ==========-->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollButton = document.getElementById('scrollToTopBtn');
 
-        // Function to show/hide the button based on scroll position
-        window.addEventListener('scroll', () => {
-            // Show the button after scrolling down 300 pixels
-            if (window.scrollY > 300) {
-                scrollButton.style.display = 'flex';
-            } else {
-                scrollButton.style.display = 'none';
-            }
-        });
-
-        // Function to handle smooth scrolling back to the top
-        scrollButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Smoothly scroll to the top (position 0)
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
-
-<!--========== AOS Script ==========-->
+    <!--========== AOS Script ==========-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({
@@ -300,7 +283,5 @@
         offset: 120
     });
 </script>
-
-
 </body>
 </html>
