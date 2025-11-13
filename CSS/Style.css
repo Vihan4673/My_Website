@@ -291,7 +291,6 @@ section {
 }
 
 /* -------------------------------- RESPONSIVE -------------------------------- */
-
 /* Tablet & Mobile */
 @media screen and (max-width: 768px) {
     #menu-icon{ display: block; cursor: pointer; }
@@ -310,12 +309,17 @@ section {
         flex-direction: column-reverse;
         text-align: center;
         padding-top: 12rem;
+        align-items: center; /* <-- center everything */
     }
-    .home .home-img, .home-content{ max-width: 100%; }
+    .home .home-img, .home-content{
+        max-width: 100%;
+        display: flex;
+        justify-content: center; /* <-- center image horizontally */
+    }
     .home-content h1{ font-size: 4.5rem; }
     .home-content h3{ font-size: 2.5rem; }
     .home-content p{ font-size: 1.5rem; }
-    .home .home-img img{ height: 350px; width: 350px; }
+    .home .home-img img{ height: 350px; width: 350px; margin: 0 auto; } /* <-- center image */
 }
 
 /* Mobile Large 425px */
@@ -323,7 +327,7 @@ section {
     .home-content h1{ font-size: 3.5rem; }
     .home-content h3{ font-size: 2.2rem; }
     .home-content p{ font-size: 1.4rem; }
-    .home .home-img img{ height: 300px; width: 300px; }
+    .home .home-img img{ height: 300px; width: 300px; margin: 0 auto; }
     .social-btns{ justify-content: center; }
 }
 
@@ -332,7 +336,7 @@ section {
     .home-content h1{ font-size: 3rem; }
     .home-content h3{ font-size: 2rem; }
     .home-content p{ font-size: 1.3rem; }
-    .home .home-img img{ height: 260px; width: 260px; }
+    .home .home-img img{ height: 260px; width: 260px; margin: 0 auto; }
 }
 
 /* Mobile Small 320px */
@@ -341,25 +345,8 @@ section {
     .home-content h3{ font-size: 1.8rem; }
     .home-content p{ font-size: 1.2rem; }
     .contactme{ padding: 0.8rem 2rem; font-size: 1.3rem; }
-    .home .home-img img{ height: 220px; width: 220px; }
+    .home .home-img img{ height: 220px; width: 220px; margin: 0 auto; }
 }
-
-/* Laptop 1024px */
-@media screen and (max-width: 1024px) {
-    .home-content h1{ font-size: 5rem; }
-    .home-content h3{ font-size: 2.8rem; }
-    .home-content p{ font-size: 1.6rem; }
-    .home .home-img img{ height: 400px; width: 400px; }
-}
-
-/* Laptop Large 1440px */
-@media screen and (max-width: 1440px) {
-    .home-content h1{ font-size: 6rem; }
-    .home-content h3{ font-size: 3rem; }
-    .home-content p{ font-size: 1.7rem; }
-    .home .home-img img{ height: 450px; width: 450px; }
-}
-
 
 /* ------------------------------------ SCROLL TO TOP BUTTON ------------------------------------ */
 .scroll-to-top {
