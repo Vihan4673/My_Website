@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Vihan Vimen</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="Img/WhatsApp%20Image%202025-09-09%20at%2008.12.11_6be0b0a2.jpg">
     <meta name="keywords" content="HTML, CSS, JS">
     <meta name="description" content="This my HTML, CSS, JS Tutorial">
     <meta name="author" content="Vihan Vimen">
@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -65,7 +66,6 @@
                 <a class="btn instagram" href="https://www.instagram.com/vi_ha_n_73?igsh=MXNkODVjeXNmdGhlag%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a class="btn github" href="https://github.com/Vihan4673" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-
             <a href="#contactme" class="contactme" data-aos="zoom-in">Contact Me</a>
         </div>
 
@@ -80,25 +80,42 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-
-    <!--============================================= About Section ============================================-->
+    <!--===========================================About Section ===============================================-->
     <section class="about section" id="about" data-aos="fade-up">
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
-            <div class="about-img" data-aos="zoom-in">
-                <img src="Img/Image%20.jpg" alt="About Image">
+            <div class="about-img glass-photo-card" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-cubic">
+                <img src="Img/Image%20.jpg" alt="Vihan Vimen Profile">
             </div>
-            <div class="about-content" data-aos="fade-left">
+
+            <div class="about-content glass-main-card" data-aos="fade-left" data-aos-delay="400" data-aos-easing="ease-out-cubic">
                 <h3 class="about-title">I'm Vihan Vimen</h3>
-                <p class="about-subtitle">A Passionate Developer</p>
+                <p class="about-subtitle">Crafting the Future as a Full-Stack Developer</p>
                 <p class="about-text">
-                    I am a dedicated and enthusiastic developer with a passion for creating innovative solutions. With a strong foundation in web development, I specialize in building responsive and user-friendly applications. My goal is to leverage technology to solve real-world problems and enhance user experiences.
+                    As a passionate and detail-oriented developer, I thrive on building **elegant and robust web applications** from concept to deployment. My expertise spans both front-end aesthetics and back-end logic, driven by a commitment to **performance, user experience, and clean code**. Let's build something amazing together.
                 </p>
-                <a href="#" class="btn" data-aos="flip-up">Download CV</a>
+
+                <div class="education wow-timeline">
+                    <h4> My Learning Path</h4>
+                    <ul class="timeline">
+                        <li data-aos="fade-up" data-aos-delay="600">
+                            <span class="timeline-year">2022 - 2025</span>
+                            <p><strong>B.Sc in Computer Science (Ongoing)</strong>, IJSE</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="700">
+                            <span class="timeline-year">2023</span>
+                            <p><strong>Advanced Web Development Bootcamp</strong>, Mastered Modern Frameworks</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="800">
+                            <span class="timeline-year">2017 - 2021</span>
+                            <p><strong>Commerce Stream (A/L)</strong>, K/Aluthgama National School</p>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn glass-btn" data-aos="fade-up" data-aos-delay="900">Download CV</a>
             </div>
         </div>
     </section>
-
     <!--============================================= Services Section ===============================================-->
     <section class="services section" id="services" data-aos="fade-up">
         <h2 class="section-title">My Services</h2>
@@ -121,71 +138,164 @@
         </div>
     </section>
 
-    <!--=============================================== Skills Section ============================================-->
-    <section class="skills section" id="skills" data-aos="fade-up">
-        <h2 class="section-title">Tech <span class="highlight">Skills</span></h2>
-        <div class="skills-container icon-grid">
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-java"></i><h3>java</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fab fa-python"></i><h3>Python</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-js-square"></i><h3>JavaScript</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-node-js"></i><h3>Node.js</h3></div>
+
+    <!--============================================= Skill Section ===============================================-->
+    <section id="skills" class="py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-12 tracking-tight">
+                <span class="text-gradient">Tech</span> Skills
+            </h2>
+            <div class="skills-container">
+                <div class="skills-track">
+                    <div class="skill-box">
+                        <i class="fab fa-java fa-java-color"></i>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path fill="#E34F26" d="M1.5 0l2.5 2.5h16l2.5-2.5zm4.5 5.5l-.5 4.5h11l-.5-4.5zM2 12l.5 4.5h19l.5-4.5zM3 18l.5 4.5h17l.5-4.5z"/></svg>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path fill="#1572B6" d="M1.5 0l2.5 2.5h16l2.5-2.5zm4.5 5.5l-.5 4.5h11l-.5-4.5zM2 12l.5 4.5h19l.5-4.5zM3 18l.5 4.5h17l.5-4.5z"/></svg>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <title>Java</title>
+                            <path fill="#007396" d="M16 0C7.164 0 0 7.163 0 16c0 8.836 7.164 16 16 16s16-7.164 16-16C32 7.163 24.836 0 16 0zm1.172 24.828c-4.99 0-7.032-4.32-7.032-8.872 0-1.572.244-3.088.724-4.508.324-1.036 1.508-1.26 2.16-.48 1.032 1.404 2.268 3.48 4.016 4.996 1.608 1.424 3.012 1.484 3.012 2.564 0 .992-.816 1.48-1.464 1.48-1.152 0-1.604-.804-2.864-1.804-1.348-1.096-2.288-2.224-3.272-3.672-1.12-1.68-2.064-3.18-3.544-4.28-.852-.656-1.468-.304-1.376.6.076.752.36 1.484.776 2.16 1.256 2.224 3.896 4.032 6.392 6.336 1.28 1.136 1.456 1.84.728 3.08z"/>
+                        </svg>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path fill="#FFD43B" d="M12 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zm0 2.16a7.56 7.56 0 1 1 0 15.12 7.56 7.56 0 0 1 0-15.12zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Node.js</title><path fill="#339933" d="M12 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zm0 2.16a7.56 7.56 0 1 1 0 15.12 7.56 7.56 0 0 1 0-15.12zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-java fa-java-color"></i>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path fill="#E34F26" d="M1.5 0l2.5 2.5h16l2.5-2.5zm4.5 5.5l-.5 4.5h11l-.5-4.5zM2 12l.5 4.5h19l.5-4.5zM3 18l.5 4.5h17l.5-4.5z"/></svg>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path fill="#1572B6" d="M1.5 0l2.5 2.5h16l2.5-2.5zm4.5 5.5l-.5 4.5h11l-.5-4.5zM2 12l.5 4.5h19l.5-4.5zM3 18l.5 4.5h17l.5-4.5z"/></svg>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React</title><path fill="#61DAFB" d="M12 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zm0 2.16a7.56 7.56 0 1 1 0 15.12 7.56 7.56 0 0 1 0-15.12zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Python</title><path fill="#FFD43B" d="M12 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zm0 2.16a7.56 7.56 0 1 1 0 15.12 7.56 7.56 0 0 1 0-15.12zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Node.js</title><path fill="#339933" d="M12 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zm0 2.16a7.56 7.56 0 1 1 0 15.12 7.56 7.56 0 0 1 0-15.12zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>Node.js</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2 class="section-title">Tech <span class="highlight">Learning & Exploring </span></h2>
-        <div class="skills-container icon-grid">
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="600"><i class="fas fa-code"></i><h3>C++</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="700"><i class="fas fa-code"></i><h3>C#</h3></div>
-            <div class="skill-box icon-card" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-react"></i><h3>React</h3></div>
+
+        <div class="max-w-7xl mx-auto px-4 mt-24">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-4 tracking-tight">
+                Learning and <span class="text-gradient">Exploring</span>
+            </h2>
+
+
+            <div class="skills-container">
+                <div class="skills-track">
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Angular</title><path fill="#DD0031" d="M12 0L0 4.5l1.41 14.16L12 24l10.59-5.34L24 4.5zm0 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>Angular</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-database fa-postgres-color"></i>
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-server fa-server-color"></i>
+                        <h3>Microservices</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-aws fa-aws-color"></i>
+                        <h3>AWS Basics</h3>
+                    </div>
+
+                    <div class="skill-box">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Angular</title><path fill="#DD0031" d="M12 0L0 4.5l1.41 14.16L12 24l10.59-5.34L24 4.5zm0 2.28a9.72 9.72 0 1 0 0 19.44 9.72 9.72 0 0 0 0-19.44zM12 8.76a3.24 3.24 0 1 0 0 6.48 3.24 3.24 0 0 0 0-6.48z"/></svg>
+                        <h3>Angular</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-database fa-postgres-color"></i>
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-server fa-server-color"></i>
+                        <h3>Microservices</h3>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-aws fa-aws-color"></i>
+                        <h3>AWS Basics</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!--=================================================== Projects Section ==============================================-->
-    <section class="projects section" id="Projects" data-aos="fade-up">
+
+
+    <!--============================================= Project Section ===============================================-->
+    <section class="projects section" id="Projects">
         <h2 class="section-title">My Projects</h2>
-        <div class="projects-container">
 
-            <div class="project-box"  data-aos="fade-up" data-aos-delay="100">
-                <img src="Img/project1.jpg" alt="Task Manager Web Application">
-                <h3 class="project-title">Project One</h3>
-                <p class="project-description">A web application that allows users to track their tasks and manage their time effectively.</p>
+        <div class="projects-wrapper">
+            <div class="projects-container">
 
-                <div class="btn-container">
-                    <a href="https://github.com/your-username/project-one-repo" target="_blank" class="github-btn">
-                        <i class="fab fa-github mr-2"></i> Repository Balanna
-                    </a>
+                <div class="project-box">
+                    <video src="Video/Recording%202025-11-13%20125034.mp4" autoplay loop muted playsinline class="project-video"></video>
+                    <h3 class="project-title">Wimal Villa</h3>
+                    <p class="project-description">A web application that allows users to track their tasks and manage their time effectively.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/your-username/project-one-repo" target="_blank" class="github-btn">
+                            <i class="fab fa-github mr-2"></i> Repository
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Project Two -->
-            <div class="project-box"  data-aos="fade-up" data-aos-delay="200">
-                <img src="Img/project2.jpg" alt="E-commerce Platform">
-                <h3 class="project-title">Project Two</h3>
-                <p class="project-description">An e-commerce platform that provides a seamless shopping experience for users.</p>
-
-                <div class="btn-container">
-                    <a href="https://github.com/your-username/project-two-repo" target="_blank" class="github-btn">
-                        <i class="fab fa-github mr-2"></i> Github Repository
-                    </a>
+                <div class="project-box">
+                    <video src="Video/Recording%202025-11-13%20130141.mp4" autoplay loop muted playsinline class="project-video"></video>
+                    <h3 class="project-title">Project Two</h3>
+                    <p class="project-description">An e-commerce platform that provides a seamless shopping experience for users.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/your-username/project-two-repo" target="_blank" class="github-btn">
+                            <i class="fab fa-github mr-2"></i> Repository
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Project Three -->
-            <div class="project-box"  data-aos="fade-up" data-aos-delay="300">
-                <img src="Img/project3.jpg" alt="Mobile Fitness App">
-                <h3 class="project-title">Project Three</h3>
-                <p class="project-description">A mobile app that helps users stay fit and healthy by tracking their workouts and nutrition.</p>
-
-                <!-- GitHub Button Added -->
-                <div class="btn-container">
-                    <a href="https://github.com/your-username/project-three-repo" target="_blank" class="github-btn">
-                        <i class="fab fa-github mr-2"></i> Github Repository
-                    </a>
+                <div class="project-box">
+                    <video src="Videos/project3.mp4" autoplay loop muted playsinline class="project-video"></video>
+                    <h3 class="project-title">Project Three</h3>
+                    <p class="project-description">A mobile app that helps users stay fit and healthy by tracking their workouts and nutrition.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/your-username/project-three-repo" target="_blank" class="github-btn">
+                            <i class="fab fa-github mr-2"></i> Repository
+                        </a>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
+
+        <div class="scroll-dots"></div>
     </section>
+
 
 
     <!--============================================ Assignments Section ==================================================-->
@@ -228,24 +338,53 @@
         </div>
     </section>
 
-    <!--========================================= Contact Me Section ===================================-->
+    <!-- ========================================= CONTACT SECTION =================================== -->
     <section id="contactme" data-aos="fade-up">
         <h2>Get In <span>Touch</span></h2>
         <div class="contact-container">
             <h3>Send a Message</h3>
             <p>I'm always open to discussing new projects or opportunities. Use the form below!</p>
-            <form>
-                <div class="form-group"><input type="text" placeholder="Your Name" required></div>
-                <div class="form-group"><input type="email" placeholder="Your Email Address" required></div>
-                <div class="form-group"><input type="text" placeholder="Subject or Inquiry" required></div>
-                <div class="form-group"><textarea rows="5" placeholder="Write your message here..." required></textarea></div>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject or Inquiry" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
                 <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
 
+    <!-- ========================================= EmailJS Integration =================================== -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+
+        emailjs.init("YOUR_PUBLIC_KEY");
+
+        document.getElementById("contact-form").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                .then(function() {
+                    alert("Message sent successfully to vihanvimen46@gmail.com!");
+                    document.getElementById("contact-form").reset();
+                }, function(error) {
+                    alert("Failed to send message: " + JSON.stringify(error));
+                });
+        });
+    </script>
+
+
+
     <!-- ============================ Footer ============================ -->
-    <!-- Footer with waves and fade-up animation -->
     <footer id="fade" data-aos="fade-up">
         <div class="waves">
             <div class="wave" id="wave1"></div>

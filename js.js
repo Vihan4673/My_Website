@@ -76,4 +76,50 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// projects section
+const wrapper = document.querySelector('.projects-wrapper');
+const projects = document.querySelectorAll('.project-box');
+const dotsContainer = document.querySelector('.scroll-dots');
 
+projects.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if(index === 0) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+        wrapper.scrollLeft = projects[index].offsetLeft - wrapper.offsetLeft;
+    });
+
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.scroll-dots .dot');
+
+wrapper.addEventListener('scroll', () => {
+    const scrollCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
+    projects.forEach((project, idx) => {
+        const projectCenter = project.offsetLeft + project.offsetWidth / 2;
+        if(Math.abs(scrollCenter - projectCenter) < project.offsetWidth / 2){
+            dots.forEach(d => d.classList.remove('active'));
+            dots[idx].classList.add('active');
+        }
+    });
+});
+
+
+
+<!-- ========================================= Email =================================== -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    emailjs.init("6f474799-fa6d-4180-869f-6299f864f8bf");
+
+    document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(() => {
+    alert("Message sent successfully to vihanvimen46@gmail.com!");
+    this.reset();
+}, (err) => {
+    alert("Failed to send message: " + JSON.stringify(err));
+});
+});
