@@ -81,6 +81,7 @@ const wrapper = document.querySelector('.projects-wrapper');
 const projects = document.querySelectorAll('.project-box');
 const dotsContainer = document.querySelector('.scroll-dots');
 
+// Create dots dynamically
 projects.forEach((_, index) => {
     const dot = document.createElement('span');
     dot.classList.add('dot');
@@ -95,6 +96,7 @@ projects.forEach((_, index) => {
 
 const dots = document.querySelectorAll('.scroll-dots .dot');
 
+// Update active dot on scroll
 wrapper.addEventListener('scroll', () => {
     const scrollCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
     projects.forEach((project, idx) => {
@@ -107,20 +109,17 @@ wrapper.addEventListener('scroll', () => {
 });
 
 
-
 <!-- ========================================= Email =================================== -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    emailjs.init("6f474799-fa6d-4180-869f-6299f864f8bf");
+emailjs.init("6f474799-fa6d-4180-869f-6299f864f8bf");
 
-    document.getElementById("contact-form").addEventListener("submit", function(event){
+document.getElementById("contact-form").addEventListener("submit", function(event){
     event.preventDefault();
 
     emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-    .then(() => {
-    alert("Message sent successfully to vihanvimen46@gmail.com!");
-    this.reset();
-}, (err) => {
-    alert("Failed to send message: " + JSON.stringify(err));
+        .then(() => {
+            alert("Message sent successfully to vihanvimen46@gmail.com!");
+            this.reset();
+        }, (err) => {
+            alert("Failed to send message: " + JSON.stringify(err));
+        });
 });
-});
-

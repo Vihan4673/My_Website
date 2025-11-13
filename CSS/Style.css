@@ -291,6 +291,7 @@ section {
 }
 
 /* -------------------------------- RESPONSIVE -------------------------------- */
+
 /* Tablet & Mobile */
 @media screen and (max-width: 768px) {
     #menu-icon{ display: block; cursor: pointer; }
@@ -309,17 +310,12 @@ section {
         flex-direction: column-reverse;
         text-align: center;
         padding-top: 12rem;
-        align-items: center; /* <-- center everything */
     }
-    .home .home-img, .home-content{
-        max-width: 100%;
-        display: flex;
-        justify-content: center; /* <-- center image horizontally */
-    }
+    .home .home-img, .home-content{ max-width: 100%; }
     .home-content h1{ font-size: 4.5rem; }
     .home-content h3{ font-size: 2.5rem; }
     .home-content p{ font-size: 1.5rem; }
-    .home .home-img img{ height: 350px; width: 350px; margin: 0 auto; } /* <-- center image */
+    .home .home-img img{ height: 350px; width: 350px; }
 }
 
 /* Mobile Large 425px */
@@ -327,7 +323,7 @@ section {
     .home-content h1{ font-size: 3.5rem; }
     .home-content h3{ font-size: 2.2rem; }
     .home-content p{ font-size: 1.4rem; }
-    .home .home-img img{ height: 300px; width: 300px; margin: 0 auto; }
+    .home .home-img img{ height: 300px; width: 300px; }
     .social-btns{ justify-content: center; }
 }
 
@@ -336,7 +332,7 @@ section {
     .home-content h1{ font-size: 3rem; }
     .home-content h3{ font-size: 2rem; }
     .home-content p{ font-size: 1.3rem; }
-    .home .home-img img{ height: 260px; width: 260px; margin: 0 auto; }
+    .home .home-img img{ height: 260px; width: 260px; }
 }
 
 /* Mobile Small 320px */
@@ -345,20 +341,38 @@ section {
     .home-content h3{ font-size: 1.8rem; }
     .home-content p{ font-size: 1.2rem; }
     .contactme{ padding: 0.8rem 2rem; font-size: 1.3rem; }
-    .home .home-img img{ height: 220px; width: 220px; margin: 0 auto; }
+    .home .home-img img{ height: 220px; width: 220px; }
 }
 
-/* ------------------------------------ SCROLL TO TOP BUTTON ------------------------------------ */
+/* Laptop 1024px */
+@media screen and (max-width: 1024px) {
+    .home-content h1{ font-size: 5rem; }
+    .home-content h3{ font-size: 2.8rem; }
+    .home-content p{ font-size: 1.6rem; }
+    .home .home-img img{ height: 400px; width: 400px; }
+}
+
+/* Laptop Large 1440px */
+@media screen and (max-width: 1440px) {
+    .home-content h1{ font-size: 6rem; }
+    .home-content h3{ font-size: 3rem; }
+    .home-content p{ font-size: 1.7rem; }
+    .home .home-img img{ height: 450px; width: 450px; }
+}
+
+
+
+/* --- Scroll to Top Button Style --- */
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
     width: 55px;
     height: 55px;
-    background: #25afb6;
+    background: #25afb6; /* User-friendly modern color */
     color: white;
     border-radius: 50%;
-    display: none;
+    display: none; /* Initially hidden, controlled by JS */
     align-items: center;
     justify-content: center;
     font-size: 28px;
@@ -368,6 +382,7 @@ section {
     transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
     text-decoration: none;
 }
+
 .scroll-to-top:hover {
     background: #1d8a90;
     transform: scale(1.1) translateY(-3px);
