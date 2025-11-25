@@ -77,36 +77,109 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // projects section
-const wrapper = document.querySelector('.projects-wrapper');
-const projects = document.querySelectorAll('.project-box');
-const dotsContainer = document.querySelector('.scroll-dots');
 
-// Create dots dynamically
-projects.forEach((_, index) => {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if(index === 0) dot.classList.add('active');
 
-    dot.addEventListener('click', () => {
-        wrapper.scrollLeft = projects[index].offsetLeft - wrapper.offsetLeft;
-    });
 
-    dotsContainer.appendChild(dot);
-});
 
-const dots = document.querySelectorAll('.scroll-dots .dot');
 
-// Update active dot on scroll
-wrapper.addEventListener('scroll', () => {
-    const scrollCenter = wrapper.scrollLeft + wrapper.offsetWidth / 2;
-    projects.forEach((project, idx) => {
-        const projectCenter = project.offsetLeft + project.offsetWidth / 2;
-        if(Math.abs(scrollCenter - projectCenter) < project.offsetWidth / 2){
-            dots.forEach(d => d.classList.remove('active'));
-            dots[idx].classList.add('active');
+
+
+// Project Filter Functionality
+// ===================== Project Filter + See More =====================
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectCards = document.querySelectorAll('.project-card');
+    const projectsGrid = document.querySelector('.projects-grid');
+
+    // Add See More button container
+    const seeMoreButtonContainer = document.createElement('div');
+    seeMoreButtonContainer.className = 'see-more-container';
+    seeMoreButtonContainer.innerHTML = `
+        <button id="seeMoreButton" class="see-more-button">
+            See More <i class="fas fa-chevron-down"></i>
+        </button>
+    `;
+    projectsGrid.parentNode.insertBefore(seeMoreButtonContainer, projectsGrid.nextSibling);
+
+    const seeMoreButton = document.getElementById('seeMoreButton');
+
+    const initialLimit = 3;
+    let currentLimit = initialLimit;
+    let currentFilter = 'all';
+    let expandedView = false;
+
+    function updateProjectVisibility() {
+        let visibleCount = 0;
+
+        projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const matchesFilter = currentFilter === 'all' || category === currentFilter;
+
+            if (matchesFilter) {
+                visibleCount++;
+                if (visibleCount <= currentLimit || expandedView) {
+                    card.style.display = 'block';
+                    card.classList.add('visible'); // optional animation class
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('visible');
+                }
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('visible');
+            }
+        });
+
+        // Update See More button
+        const totalForFilter = Array.from(projectCards).filter(card => {
+            const category = card.getAttribute('data-category');
+            return currentFilter === 'all' || category === currentFilter;
+        }).length;
+
+        if (totalForFilter <= initialLimit) {
+            seeMoreButton.style.display = 'none';
+        } else {
+            seeMoreButton.style.display = 'block';
+            seeMoreButton.innerHTML = expandedView ? 'See Less <i class="fas fa-chevron-up"></i>' : 'See More <i class="fas fa-chevron-down"></i>';
         }
+    }
+
+    // Filter button click
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            currentFilter = button.getAttribute('data-filter');
+            expandedView = false;
+            currentLimit = initialLimit;
+            updateProjectVisibility();
+        });
     });
+
+    // See More click
+    seeMoreButton.addEventListener('click', () => {
+        expandedView = !expandedView;
+        updateProjectVisibility();
+    });
+
+    // Initialize
+    updateProjectVisibility();
+
+    // Optional: IntersectionObserver for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    projectCards.forEach(card => observer.observe(card));
 });
+
+
+
 
 
 <!-- ========================================= Email =================================== -->
@@ -123,3 +196,23 @@ document.getElementById("contact-form").addEventListener("submit", function(even
             alert("Failed to send message: " + JSON.stringify(err));
         });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    window.onload = function () {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("pageContent").style.display = "block";
+};
+

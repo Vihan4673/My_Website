@@ -22,6 +22,13 @@
 </head>
 
 <body>
+<div id="loader"></div>
+
+<div id="pageContent" style="display:none;">
+    <!-- ALL YOUR CONTENT STARTS FROM HERE -->
+
+
+
 <div class="animation-container">
     <ul class="squares" aria-hidden="true">
         <li></li><li></li><li></li><li></li><li></li>
@@ -54,7 +61,6 @@
             <h1>Vihan Vimen</h1>
 
             <h3>And I'm a <span class="typing"></span></h3>
-            <script src="js.js"></script>
 
             <p>Passionate about building user-friendly applications and solving
                 real-world problems with code</p>
@@ -232,74 +238,457 @@
 
 
     <!--============================================= Project Section ===============================================-->
-    <section class="projects section" id="Projects" data-aos="fade-up">
-        <h2 class="section-title" data-aos="fade-down">My Projects</h2>
 
-        <div class="projects-wrapper">
-            <div class="projects-container">
-                <div class="project-box" data-aos="zoom-in" data-aos-delay="100">
-                    <video src="Video/Recording%202025-11-13%20125034.mp4" autoplay loop muted playsinline class="project-video"></video>
-                    <h3 class="project-title">Wimal Villa</h3>
-                    <p class="project-description">A web application that allows users to track their tasks and manage their time effectively.</p>
-                    <div class="btn-container">
-                        <a href="https://github.com/your-username/project-one-repo" target="_blank" class="github-btn">
-                            <i class="fab fa-github mr-2"></i> Repository
-                        </a>
+    <!-- projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">My <span>Projects</span></h2>
+
+            <!-- Project Filter -->
+            <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="projects">Projects</button>
+                <button class="filter-button" data-filter="assignments">Assignments</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project Cards -->
+                <div class="project-card" data-category="projects" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/em.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">A fully responsive e-commerce platform with payment integration and admin dashboard.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JSP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dasunwijayathilaka/Ecommerce.git" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-box" data-aos="zoom-in" data-aos-delay="200">
-                    <video src="Video/Recording%202025-11-13%20130141.mp4" autoplay loop muted playsinline class="project-video"></video>
-                    <h3 class="project-title">ShopFlow</h3>
-                    <p class="project-description">An e-commerce platform that provides a seamless shopping experience for users.</p>
-                    <div class="btn-container">
-                        <a href="https://github.com/your-username/project-two-repo" target="_blank" class="github-btn">
-                            <i class="fab fa-github mr-2"></i> Repository
-                        </a>
+                <div class="project-card" data-category="projects" data-aos="fade-up" data-aos-delay="150">
+                    <div class="project-image">
+                        <img src="assets/images/clu.png" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Culinary Academy</h3>
+                        <p class="project-description">Comprehensive JavaFX-Based Culinary Academy Management System</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Hibernate</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dasunwijayathilaka/ORM_Final.git" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-box" data-aos="zoom-in" data-aos-delay="300">
-                    <video src="Videos/project3.mp4" autoplay loop muted playsinline class="project-video"></video>
-                    <h3 class="project-title">license-school</h3>
-                    <p class="project-description">A mobile app that helps users stay fit and healthy by tracking their workouts and nutrition.</p>
-                    <div class="btn-container">
-                        <a href="https://github.com/your-username/project-three-repo" target="_blank" class="github-btn">
-                            <i class="fab fa-github mr-2"></i> Repository
-                        </a>
+                <div class="project-card" data-category="projects" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/chat.jpg" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Chat App</h3>
+                        <p class="project-description">Created a real-time messaging application with features like user authentication.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaFX</span>
+                            <span class="tech-tag">Java NIO</span>
+                            <span class="tech-tag">Thread</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/dasunwijayathilaka/Chat-Aplication-Final-Exam.git" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="scroll-dots" data-aos="fade-up" data-aos-delay="400"></div>
-    </section>
 
 
-    <!--============================================ Assignments Section ==================================================-->
-    <section class="Assignments" id="Assignments" data-aos="fade-up">
-        <h2 class="section-title">My Assignments</h2>
-        <div class="assignments-container">
+                <!-- Assignment Cards -->
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/ca3.png" alt="Assignment 1">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 3: case 1</h3>
+                        <p class="project-description">A colorful grid layout with four quadrants in red, green, yellow, and pink.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index3.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Assignment_03_Internet_Technologies/blob/main/case_01/case_01.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Assignment One -->
-            <div class="assignment-box" data-aos="fade-up" data-aos-delay="100">
-                <h3>Assignment One</h3>
-                <p>A description of Assignment One, what you did, and the technologies used.</p>
-                <a href="Assignment1.html" class="assignment-btn"><i class="fas fa-file-alt"></i> View Assignment</a>
-            </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/ca3.2.png" alt="Assignment 2">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 3: case 2</h3>
+                        <p class="project-description"> Monkey Animation Base Mini</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index3.2.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Assignment_03_Internet_Technologies/blob/main/case_02/case_02.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Assignment Two -->
-            <div class="assignment-box" data-aos="fade-up" data-aos-delay="200">
-                <h3>Assignment Two</h3>
-                <p>A description of Assignment Two, explaining the purpose and results.</p>
-                <a href="Assignment2.html" class="assignment-btn"><i class="fas fa-file-alt"></i> View Assignment</a>
-            </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/mon.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 3: case 3</h3>
+                        <p class="project-description">A simple circular design with concentric circles in different colors.
 
-            <!-- Assignment Three -->
-            <div class="assignment-box" data-aos="fade-up" data-aos-delay="300">
-                <h3>Assignment Three</h3>
-                <p>A description of Assignment Three, showcasing skills learned or applied.</p>
-                <a href="Assignment3.html" class="assignment-btn"><i class="fas fa-file-alt"></i> View Assignment</a>
+                            RUN</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index3.3.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Assignment_03_Internet_Technologies/blob/main/case_03/case_03.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/hel.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 3: case 4</h3>
+                        <p class="project-description">Implementation of security protocols and data protection measures.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index3.4.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Assignment_03_Internet_Technologies/blob/main/case_04/case_04.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/re.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 3: case 5</h3>
+                        <p class="project-description">Rectangles Including Both Colors.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index3.5.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Assignment_03_Internet_Technologies/blob/main/case_05/case_05.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/rec2.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 3: case 6</h3>
+                        <p class="project-description">Trangles , Rectangles Included.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index3.6.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Assignment_03_Internet_Technologies/blob/main/case_06/case_06.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/a11.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 4: case 1</h3>
+                        <p class="project-description">vertical sidebar with five purple icons,
+                            each representing user profile</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/case1.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet_Technology_Assignment_04/blob/master/Case-1/case01.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/asss2.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 4: case 2</h3>
+                        <p class="project-description">Displays a blue background with a circular
+                            logo in the center containing the text "RWMD."</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/case2.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet_Technology_Assignment_04/blob/master/Case-2/case2.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/asss3.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 4: case 3</h3>
+                        <p class="project-description">Implementation of security protocols and data protection measures.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/case3.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet_Technology_Assignment_04/blob/master/Case-2/case2.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/a44.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 4: case 4</h3>
+                        <p class="project-description">Displays a black background with a
+                            faint red circle in the center.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/case4.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet_Technology_Assignment_04/blob/master/Case-4/case4.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/Ele.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 4: case 5</h3>
+                        <p class="project-description">Features a scenic image of a bridge
+                            and trees in a natural setting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/case5.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet_Technology_Assignment_04/blob/master/Case-5/case-5.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/asss6.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 4: case 6</h3>
+                        <p class="project-description">an image of a yellow car in a
+                            cityscape setting with skyscrapers
+                            in the background.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/case6.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet_Technology_Assignment_04/blob/master/Case-6/case-6.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/pt.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 5: </h3>
+                        <p class="project-description">Main Content was Portfolio Project.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="index.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Portfolio-7.0.git" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/index7.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 7: </h3>
+                        <p class="project-description">an image of a White background shiny look Dashboard
+                            and It was POS System.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index7.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/pos_project/blob/master/index.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/que.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 8: </h3>
+                        <p class="project-description">Java Script QUE Based Mini Maths Include .</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index8.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet-Technology-Assignment-08/blob/master/index.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/kng.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 9: </h3>
+                        <p class="project-description">an image of a Knight Rider car Front side light bar system .</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index9.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet-Technology-Assignment-9-light-bar/blob/master/index.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="assignments">
+                    <div class="project-image">
+                        <img src="assets/images/cal.png" alt="Assignment 3">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assignment 10: </h3>
+                        <p class="project-description">an image of a Green Background calculator and Modifyied New look .</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Creativity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assignments/index10.html" class="project-link">
+                                <i class="fas fa-globe"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/dasunwijayathilaka/Internet-Technology-Assignment-10-calculator/blob/master/index.html" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -391,16 +780,19 @@
     </footer>
 
 
-    <!--========== AOS Script ==========-->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1200,
-        once: false,
-        offset: 120
-    });
 
-</script>
+    <!--========== AOS Script ==========-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: false,
+            offset: 120
+        });
+
+    </script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="js.js"></script>
+</div>
 </body>
 </html>
